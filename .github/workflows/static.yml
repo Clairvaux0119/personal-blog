@@ -46,6 +46,12 @@ jobs:
         run: |
           cd my-blog
           npm install
+
+      # 步骤3.5: 修复二进制文件权限
+      - name: 修复权限
+        run: |
+          cd my-blog
+          find ./node_modules/.bin -type f -exec chmod +x {} \;
           
       # 步骤4: 构建 Vue 项目
       - name: 构建 Vue 项目
