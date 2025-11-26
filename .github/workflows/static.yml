@@ -51,7 +51,9 @@ jobs:
       - name: 构建 Vue 项目
         run: |
           cd my-blog
-          ./node_modules/.bin/vite build
+          # chmod +x ./node_modules/.bin/vite
+          # ./node_modules/.bin/vite build
+          npm run build
           
       # 步骤5: 设置 Pages 环境
       - name: 设置 Pages
