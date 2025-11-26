@@ -51,7 +51,7 @@ jobs:
       - name: 构建 Vue 项目
         run: |
           cd my-blog
-          npm run build
+          npx vite build
           
       # 步骤5: 设置 Pages 环境
       - name: 设置 Pages
