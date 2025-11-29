@@ -18,9 +18,9 @@ excerpt: "Vue事件处理"
 
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-let counter = ref(1);
+let counter = ref(1)
 </script>
 ```
 
@@ -35,8 +35,8 @@ let counter = ref(1);
 
 <script setup>
 const clickHandle = () => {
-  console.log("你好");
-};
+  console.log("你好")
+}
 </script>
 ```
 
@@ -49,14 +49,14 @@ const clickHandle = () => {
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const message = ref("消息通知");
+const message = ref("消息通知")
 
 const clickHandle = event => {
-  message.value = "消息被撤回了";
+  message.value = "消息被撤回了"
   event.target.innerHTML = "点击之后"
-};
+}
 </script>
 ```
 
@@ -86,7 +86,7 @@ const clickHandle = event => {
 
 <script setup>
 const say = message => {
-  console.log(message);
+  console.log(message)
 }
 </script>
 ```

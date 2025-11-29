@@ -10,12 +10,12 @@ excerpt: "ES6 async函数"
 ```javascript
 function print () {
     setTimeout(() => {
-        console.log("定时器");
-    }, 10);
-    console.log("Hello");
+        console.log("定时器")
+    }, 10)
+    console.log("Hello")
 }
 
-print();
+print()
 ```
 
 对于上面代码，期望的结果是控制台先输出定时器，然后输出Hello。但控制台实际上的输出结果为
@@ -49,13 +49,13 @@ async function name([param[, param[, ... param]]]) { statements }
 
 ```javascript
 async function helloAsync() {
-    return "helloAsync";
+    return "helloAsync"
 }
 
 console.log(helloAsync())
 
 helloAsync().then(v => {
-    console.log(v);
+    console.log(v)
 })
 ```
 
@@ -73,7 +73,7 @@ await操作符用于等待一个`Promise`对象, 它只能在异步函数`async 
 #### 语法
 
 ```javascript
-[return_value] = await expression;
+[return_value] = await expression
 ```
 
 expression: 一个`Promise`对象或者任何要等待的值。
@@ -90,18 +90,18 @@ expression: 一个`Promise`对象或者任何要等待的值。
 function timeout(ms) {
     return new Promise(function (resolve, reject) {
         setTimeout(() => {
-            console.log("定时器");
-            resolve();
-        }, ms);
-    });
+            console.log("定时器")
+            resolve()
+        }, ms)
+    })
 }
 
 async function asyncPrint (ms, value) {
-    await timeout(ms);
-    console.log(value);
+    await timeout(ms)
+    console.log(value)
 }
 
-asyncPrint(10, "hello");
+asyncPrint(10, "hello")
 ```
 
 控制台输出

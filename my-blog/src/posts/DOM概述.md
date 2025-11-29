@@ -58,8 +58,8 @@ document
 >注释节点 (Comment)：8，对应的常量Node.COMMENT_NODE
 
 ```javascript
-console.log(document.nodeType);
-console.log(document.nodeType === Node.DOCUMENT_NODE);
+console.log(document.nodeType)
+console.log(document.nodeType === Node.DOCUMENT_NODE)
 ```
 
 输出结果

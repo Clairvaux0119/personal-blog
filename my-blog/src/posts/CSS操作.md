@@ -15,12 +15,12 @@ excerpt: "CSS操作动态设置样式常用方法"
 <div class="box" id="box"></div>
     
 <script>
-    let box = document.getElementById("box");
+    let box = document.getElementById("box")
 
     box.setAttribute(
         "style", 
         "width:200px;height:200px;background:red"
-    );
+    )
 
 </script>
 
@@ -49,12 +49,12 @@ excerpt: "CSS操作动态设置样式常用方法"
     使用setAttribute后
 
     ```javascript
-    let box = document.getElementById("box");
+    let box = document.getElementById("box")
 
     box.setAttribute(
         "style", 
         "width:200px;height:200px;background:red"
-    );
+    )
     ```
 
     结果：原有样式被完全覆盖
@@ -80,11 +80,11 @@ excerpt: "CSS操作动态设置样式常用方法"
 <div class="box" id="box"></div>
     
 <script>
-    let box = document.getElementById("box");
+    let box = document.getElementById("box")
 
-    box.style.width = "300px";
-    box.style.height = "300px";
-    box.style.backgroundColor = "red";
+    box.style.width = "300px"
+    box.style.height = "300px"
+    box.style.backgroundColor = "red"
 </script>
 ```
 

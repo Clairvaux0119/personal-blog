@@ -20,7 +20,7 @@ excerpt: "Vue模板语法"
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const message = ref("学习vue")
 </script>
@@ -39,9 +39,9 @@ const message = ref("学习vue")
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const rawHtml = ref("<a href='https://zhidao.baidu.com/'>百度知道</a>");
+const rawHtml = ref("<a href='https://zhidao.baidu.com/'>百度知道</a>")
 </script>
 ```
 
@@ -57,9 +57,9 @@ Mustache语法不能在HTML属性中使用，要使用它需要使用`v-bind`指
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const dynamicId = ref(10001);
+const dynamicId = ref(10001)
 </script>
 ```
 
@@ -78,10 +78,10 @@ const dynamicId = ref(10001);
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const num = ref(10);
-const flag = ref(true);
+const num = ref(10)
+const flag = ref(true)
 </script>
 ```
 

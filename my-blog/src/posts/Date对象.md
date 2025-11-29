@@ -14,7 +14,7 @@ excerpt: "Date对象相关方法"
 `Date.now()`方法返回当前时间距离时间零点（1970年1月1日 00:00:00 UTC）的毫秒数，相当于Unix时间戳乘以1000。
 
 ```javascript
-console.log(Date.now());
+console.log(Date.now())
 ```
 
 输出结果
@@ -45,12 +45,12 @@ console.log(Date.now());
 >getSeconds(): 返回秒（0-59）
 
 ```javascript
-let d = new Date('January 6, 2025');
+let d = new Date('January 6, 2025')
 
-console.log(d.getDate());
-console.log(d.getMonth());
-console.log(d.getYear());
-console.log(d.getFullYear());
+console.log(d.getDate())
+console.log(d.getMonth())
+console.log(d.getYear())
+console.log(d.getFullYear())
 ```
 
 输出结果

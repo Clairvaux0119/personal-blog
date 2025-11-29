@@ -23,10 +23,10 @@ Axios是一个基于promise的网络请求库。
 // 在main.js文件中添加
 import { createApp } from 'vue'
 import App from './App.vue'
-import axios from 'axios';
+import axios from 'axios'
 
 const app = createApp(App)
-app.config.globalProperties.$axios = axios;
+app.config.globalProperties.$axios = axios
 app.mount('#app')
 ```
 
@@ -48,17 +48,17 @@ this.$axios
 </template>
 
 <script setup>
-import axios from 'axios';
-import { onMounted, ref } from 'vue';
+import axios from 'axios'
+import { onMounted, ref } from 'vue'
 
-const axiosData = ref();
+const axiosData = ref()
 
 onMounted(() => {
     axios({
         method: "get",
         url: "https://需要请求的网址"
     }).then(res => {
-        axiosData = res.data;
+        axiosData = res.data
     })
 })
 </script>
@@ -69,7 +69,7 @@ onMounted(() => {
 ```javascript
 axios.get("https://需要请求的网址")
     .then(res => {
-        axiosData = res.data;
+        axiosData = res.data
     })
 ```
 
@@ -88,11 +88,11 @@ axios.get("https://需要请求的网址")
 </template>
 
 <script setup>
-import axios from 'axios';
-import { onMounted, ref } from 'vue';
-import qs from 'queryString';
+import axios from 'axios'
+import { onMounted, ref } from 'vue'
+import qs from 'queryString'
 
-const axiosData = ref();
+const axiosData = ref()
 
 onMounted(() => {
     axios({
@@ -104,7 +104,7 @@ onMounted(() => {
             verification_code: ""
         })
     }).then(res => {
-        axiosData = res.data;
+        axiosData = res.data
     })
 })
 </script>
@@ -118,7 +118,7 @@ axios.post("https://需要请求的网址", qs.stringify({
     password: "",
     verification_code: ""
 })).then(res => {
-    axiosData = res.data;
+    axiosData = res.data
 })
 ```
 
@@ -129,40 +129,40 @@ axios.post("https://需要请求的网址", qs.stringify({
 在`src`目录下创建文件夹`utils`，并创建文件`request.js`，用来存储网络请求对象`axios`
 
 ```javascript
-import axios from "axios";
-import qs from "querystring";
+import axios from "axios"
+import qs from "querystring"
 
 // 错误信息
 const errorHandle = (status, info) => {
     switch (status) {
         case 400:
-            console.log("语义错误");
-            break;
+            console.log("语义错误")
+            break
         case 401:
-            console.log("服务器认证失败");
-            break;
+            console.log("服务器认证失败")
+            break
         case 403:
-            console.log("服务器拒绝访问");
-            break;
+            console.log("服务器拒绝访问")
+            break
         case 404:
-            console.log("地址错误");
-            break;
+            console.log("地址错误")
+            break
         case 500:
-            console.log("服务器遇到意外");
-            break;
+            console.log("服务器遇到意外")
+            break
         case 502:
-            console.log("服务器无响应");
-            break;
+            console.log("服务器无响应")
+            break
         default:
-            console.log(info);
-            break;
+            console.log(info)
+            break
     }
 }
 
 const instance = axios.create({
     // 网络请求的公共配置
     timeout: 5000
-});
+})
 
 // 常用的拦截器
 
@@ -170,28 +170,28 @@ const instance = axios.create({
 instance.interceptors.request.use(
     config => {
         if (config.method === "post") {
-            config.data = qs.stringify(config.data);
+            config.data = qs.stringify(config.data)
         }
         // config: 包含网络请求的所有信息
-        return config;
+        return config
     },
     error => {
-        return Promise.reject(error);
+        return Promise.reject(error)
     }
 )
 
 // 获取数据之前
 instance.interceptors.response.use(
     response => {
-        return response.status === 200 ? Promise.resolve(response) : Promise.reject(response);
+        return response.status === 200 ? Promise.resolve(response) : Promise.reject(response)
     },
     error => {
-        const { response } = error;
-        errorHandle(response.status, response.info);
+        const { response } = error
+        errorHandle(response.status, response.info)
     }
 )
 
-export default instance;
+export default instance
 ```
 
 >参考文档：<https://www.kancloud.cn/yunye/axios/234845>
@@ -208,33 +208,33 @@ const base = {
     testApi: "api/test"
 }
 
-export default base;
+export default base
 ```
 
 `index.js`内容
 
 ```javascript
-import axios from "../utils/request";
-import path from "./path";
+import axios from "../utils/request"
+import path from "./path"
 
 const api = {
     getTestUrl() {
-        return axios.get(path.baseUrl + path.testApi);
+        return axios.get(path.baseUrl + path.testApi)
     }
 }
 
-export default api;
+export default api
 ```
 
 在组件中使用
 
 ```javascript
-import { onMounted } from 'vue';
-import api from '../api/index';
+import { onMounted } from 'vue'
+import api from '../api/index'
 
 onMounted(() => {
     api.getTestUrl().then(res => {
-        console.log(res.data);
+        console.log(res.data)
     })
 })
 ```

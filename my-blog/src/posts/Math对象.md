@@ -14,8 +14,8 @@ excerpt: "Math对象相关方法"
 `Math.abs()`方法返回参数值的绝对值
 
 ```javascript
-console.log(Math.abs(1));
-console.log(Math.abs(-1));
+console.log(Math.abs(1))
+console.log(Math.abs(-1))
 ```
 
 输出结果
@@ -30,10 +30,10 @@ console.log(Math.abs(-1));
 `Math.max()`方法返回参数之中最大的那个值，`Math.min()`方法返回最小的那个值。如果参数为空，`Math.max()`返回`-infinity`，`Math.min()`返回`infinity`。
 
 ```javascript
-console.log(Math.max(2, -1, 5));
-console.log(Math.min(2, -1, 5));
-console.log(Math.max());
-console.log(Math.min());
+console.log(Math.max(2, -1, 5))
+console.log(Math.min(2, -1, 5))
+console.log(Math.max())
+console.log(Math.min())
 ```
 
 输出结果
@@ -50,8 +50,8 @@ Infinity
 `Math.floor()`方法返回小于参数值的最大整数。
 
 ```javascript
-console.log(Math.floor(3.2));
-console.log(Math.floor(-3.2));
+console.log(Math.floor(3.2))
+console.log(Math.floor(-3.2))
 ```
 
 输出结果
@@ -64,8 +64,8 @@ console.log(Math.floor(-3.2));
 `Math.ceil()`方法返回大于参数值的最小整数。
 
 ```javascript
-console.log(Math.ceil(3.2));
-console.log(Math.ceil(-3.2));
+console.log(Math.ceil(3.2))
+console.log(Math.ceil(-3.2))
 ```
 
 输出结果
@@ -80,7 +80,7 @@ console.log(Math.ceil(-3.2));
 `Math.random()`返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。即`0 <= Math.random() < 1`。
 
 ```javascript
-console.log(Math.random());
+console.log(Math.random())
 ```
 
 输出结果 (随机的)
@@ -93,10 +93,10 @@ console.log(Math.random());
 
 ```javascript
 function getRandomArbitrary(min, max) {
-    return Math.random()*(max - min) + min;
+    return Math.random()*(max - min) + min
 }
 
-console.log(getRandomArbitrary(5, 10));
+console.log(getRandomArbitrary(5, 10))
 ```
 
 输出结果

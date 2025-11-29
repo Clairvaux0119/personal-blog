@@ -18,12 +18,12 @@ excerpt: "Vue表单输入绑定"
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const username = ref("");
+const username = ref("")
 
 const getUserName = () => {
-  console.log(username.value);
+  console.log(username.value)
 }
 </script>
 ```
@@ -41,9 +41,9 @@ const getUserName = () => {
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const username = ref("");
+const username = ref("")
 </script>
 ```
 
@@ -60,8 +60,8 @@ const username = ref("");
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const password = ref("");
+const password = ref("")
 </script>
 ```

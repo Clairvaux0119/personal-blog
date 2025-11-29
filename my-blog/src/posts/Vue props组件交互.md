@@ -17,12 +17,12 @@ excerpt: "Vue props组件交互"
 </template>
 
 <script setup>
-import { ref } from "vue";
-import MyComponent from "./components/Props组件交互.vue";
+import { ref } from "vue"
+import MyComponent from "./components/Props组件交互.vue"
 
-const title = ref("我是一个标题");
-const age = ref(20);
-const name = ['Mike', 'Bob', 'Alice'];
+const title = ref("我是一个标题")
+const age = ref(20)
+const name = ['Mike', 'Bob', 'Alice']
 </script>
 ```
 
@@ -41,7 +41,7 @@ const name = ['Mike', 'Bob', 'Alice'];
 </template>
 
 <script setup>
-const name = "Mycomponent";
+const name = "Mycomponent"
 const props = defineProps({
     title: {
         type: String,
@@ -56,10 +56,10 @@ const props = defineProps({
 
         // 数组和对象必须使用函数进行返回
         default: function () {
-            return [];
+            return []
         }
     }
-});
+})
 </script>
 ```
 
@@ -78,7 +78,7 @@ const props = defineProps({
     commentIds: Array,
     author: Object,
     callback: Function
-});
+})
 </script>
 ```
 

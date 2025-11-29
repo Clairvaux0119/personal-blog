@@ -12,42 +12,42 @@
     <script>
         class Person {
             constructor(name, age) {
-                this.name = name;
-                this.age = age;
+                this.name = name
+                this.age = age
             }
 
             getName() {
-                console.log(this.name);
+                console.log(this.name)
             }
 
             static getInfo() {
-                console.log("这是一个人类");
+                console.log("这是一个人类")
             }
         }
 
         class Student extends Person {
             constructor(name, age, gender) {
-                super(name, age);
-                this.gender = gender;
+                super(name, age)
+                this.gender = gender
             }
 
             getGender() {
-                console.log(`性别：${this.gender}`);
+                console.log(`性别：${this.gender}`)
             }
 
             getName() {
-                console.log("学生姓名");
-                super.getName();
+                console.log("学生姓名")
+                super.getName()
             }
 
             static getInfo() {
-                super.getInfo();
-                console.log("这是一位学生");
+                super.getInfo()
+                console.log("这是一位学生")
             }
         }
 
-        let s = new Student("Bob", 20, "男");
-        Student.getInfo();
+        let s = new Student("Bob", 20, "男")
+        Student.getInfo()
     </script>
 </body>
 

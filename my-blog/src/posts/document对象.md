@@ -20,11 +20,11 @@ document对象通过获取元素与HTML元素交互。
 <p>paragraph2</p>
 
 <script>
-    let paras = document.getElementsByTagName('p');
+    let paras = document.getElementsByTagName('p')
 
-    console.log(paras);
-    console.log(paras[0]);
-    console.log(paras[1]);
+    console.log(paras)
+    console.log(paras[0])
+    console.log(paras[1])
 </script>
 ```
 
@@ -42,7 +42,7 @@ length: 2
 如果传入`*`，就可以返回文档中所有HTML元素
 
 ```javascript
-let allElements = document.getElementsByTagName('*');
+let allElements = document.getElementsByTagName('*')
 ```
 
 #### document.getElementsByClassName()
@@ -60,9 +60,9 @@ let allElements = document.getElementsByTagName('*');
 <div class="names"></div>
 
 <script>
-    let elements = document.getElementsByClassName("names");
+    let elements = document.getElementsByClassName("names")
 
-    console.log(elements);
+    console.log(elements)
 </script>
 ```
 
@@ -81,7 +81,7 @@ length: 3
 参数可以是多个`class`，它们之间使用空格间隔。
 
 ```javascript
-let elements = document.getElementsByClassName("names foo bar");
+let elements = document.getElementsByClassName("names foo bar")
 ```
 
 #### document.getElementsByName()
@@ -102,7 +102,7 @@ length: 1
 <p id="name"></p>
 
 <script>
-    console.log(document.getElementById("name"));
+    console.log(document.getElementById("name"))
 </script>
 ```
 
@@ -123,8 +123,8 @@ length: 1
 <div class="nav">nav2</div>
 
 <script>
-    let nav= document.querySelector(".nav");
-    console.log(nav);
+    let nav= document.querySelector(".nav")
+    console.log(nav)
 </script>
 ```
 
@@ -143,8 +143,8 @@ length: 1
 <div class="nav">nav2</div>
 
 <script>
-    let nav= document.querySelectorAll(".nav");
-    console.log(nav);
+    let nav= document.querySelectorAll(".nav")
+    console.log(nav)
 </script>
 ```
 
@@ -164,9 +164,9 @@ length: 2
 `document.createElement()`方法用来生成元素节点，并返回该节点。
 
 ```javascript
-let console = document.createElement('p');
+let console = document.createElement('p')
 
-console.log(text);
+console.log(text)
 ```
 
 输出结果
@@ -180,11 +180,11 @@ console.log(text);
 `document.createTextNode()`方法用来生成文本节点（`Text`实例），并返回该节点。它的参数是文本节点的内容。
 
 ```javascript
-let text = document.createElement('p');
-let content = document.createTextNode("我是文本");
+let text = document.createElement('p')
+let content = document.createTextNode("我是文本")
 
-text.appendChild(content);
-console.log(text);
+text.appendChild(content)
+console.log(text)
 ```
 
 输出结果
@@ -209,14 +209,14 @@ console.log(text);
 `document.createAttribute()`方法生成一个新的属性节点（`Attr`实例），并返回它。
 
 ```javascript
-let text = document.createElement('p');
-let content = document.createTextNode("我是文本");
-let id = document.createAttribute("id");
+let text = document.createElement('p')
+let content = document.createTextNode("我是文本")
+let id = document.createAttribute("id")
 
-id.value = "root";
-text.appendChild(content);
-text.setAttributeNode(id);
-console.log(text);
+id.value = "root"
+text.appendChild(content)
+text.setAttributeNode(id)
+console.log(text)
 ```
 
 输出结果
@@ -230,12 +230,12 @@ console.log(text);
 上面的代码可以改为
 
 ```javascript
-let text = document.createElement('p');
-let content = document.createTextNode("我是文本");
+let text = document.createElement('p')
+let content = document.createTextNode("我是文本")
 
-text.appendChild(content);
-text.setAttribute('id', 'root');
-console.log(text);
+text.appendChild(content)
+text.setAttribute('id', 'root')
+console.log(text)
 ```
 
 输出结果

@@ -17,9 +17,9 @@ excerpt: "Element对象、方法"
 <p id="foo"></p>
 
 <script>
-let p = document.querySelector('p');
+let p = document.querySelector('p')
 
-console.log(p.id);        
+console.log(p.id)        
 </script>
 ```
 
@@ -37,11 +37,11 @@ foo
 <div class="one two three" id="myDiv"></div>
 
 <script>
-    let div = document.getElementById("myDiv");
+    let div = document.getElementById("myDiv")
 
-    console.log(div.className);
-    div.className = "num";
-    console.log(div.className);       
+    console.log(div.className)
+    div.className = "num"
+    console.log(div.className)       
 </script>
 ```
 
@@ -65,16 +65,16 @@ num
 <div id="myDiv">Hello</div>
 
 <script>
-    let div = document.getElementById("myDiv");
+    let div = document.getElementById("myDiv")
 
-    div.classList.add("myClass");
-    div.classList.add("foo", "bar");
-    console.log(div.className);
-    div.classList.remove("myClass");
-    console.log(div.className);
-    div.classList.toggle("myClass");  // 如果myClass不存在就加入，否则移除
-    console.log(div.className);
-    console.log(div.classList.contains("myClass"));
+    div.classList.add("myClass")
+    div.classList.add("foo", "bar")
+    console.log(div.className)
+    div.classList.remove("myClass")
+    console.log(div.className)
+    div.classList.toggle("myClass")  // 如果myClass不存在就加入，否则移除
+    console.log(div.className)
+    console.log(div.classList.contains("myClass"))
 </script>
 ```
 
@@ -95,10 +95,10 @@ true
 <p id="text">Hello</p>
 
 <script>
-    let para = document.getElementById("text");
+    let para = document.getElementById("text")
     
-    console.log(para.innerHTML);
-    console.log(para.innerHTML = "Hello World");
+    console.log(para.innerHTML)
+    console.log(para.innerHTML = "Hello World")
 </script>
 ```
 
@@ -160,10 +160,10 @@ Hello World
     <div class="box" id="box"></div>
 
     <script>
-        let box = document.getElementById("box");
+        let box = document.getElementById("box")
         
-        console.log("高度为：" + box.clientHeight + "px");
-        console.log("宽度为：" + box.clientWidth + "px");
+        console.log("高度为：" + box.clientHeight + "px")
+        console.log("宽度为：" + box.clientWidth + "px")
     </script>
 </body>
 ```
@@ -182,8 +182,8 @@ Hello World
 `document.documentElement`的`clientHeight`属性，返回当前视口的高度（即浏览器窗口的高度）。`document.body`的高度则是网页的`body`元素高度。
 
 ```javascript
-console.log("视口高度为：" + document.documentElement.clientHeight + "px");
-console.log("网页高度为：" + document.body.clientHeight);
+console.log("视口高度为：" + document.documentElement.clientHeight + "px")
+console.log("网页高度为：" + document.body.clientHeight)
 ```
 
 输出结果
@@ -259,7 +259,7 @@ document.documentElement.scrollTop
 
 而`Element.offsetWidth`属性则表示元素的CSS水平宽度（单位像素），其他均与`Element.offsetHeight`一致。
 
-这两个属性都是**只读**属性，只比`Element.clientHeight`和`Element.clientWidth`多了边框的高度或宽度。如果元素的CSS设为不可见（比如`display: none;`，则返回`0`。
+这两个属性都是**只读**属性，只比`Element.clientHeight`和`Element.clientWidth`多了边框的高度或宽度。如果元素的CSS设为不可见（比如`display: none`，则返回`0`。
 
 ```html
 <head>
@@ -283,10 +283,10 @@ document.documentElement.scrollTop
     <div class="box" id="box"></div>
 
     <script>
-        let box = document.getElementById("box");
+        let box = document.getElementById("box")
         
-        console.log("高度为：" + box.offsetHeight + "px");
-        console.log("宽度为：" + box.offsetWidth + "px");
+        console.log("高度为：" + box.offsetHeight + "px")
+        console.log("宽度为：" + box.offsetWidth + "px")
     </script>
 </body>
 ```
@@ -334,10 +334,10 @@ document.documentElement.scrollTop
     </div>
     
     <script>
-        let box = document.getElementById("box");
+        let box = document.getElementById("box")
 
-        console.log("元素距离左端的距离：", box.offsetLeft);
-        console.log("元素距离顶端的距离：", box.offsetTop);
+        console.log("元素距离左端的距离：", box.offsetLeft)
+        console.log("元素距离顶端的距离：", box.offsetTop)
     </script>
 
 </body>

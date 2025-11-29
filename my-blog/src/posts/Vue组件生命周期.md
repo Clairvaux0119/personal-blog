@@ -148,33 +148,33 @@ digraph {
 </template>
 
 <script setup>
-import { onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated, ref } from 'vue';
+import { onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated, ref } from 'vue'
 
-const message = ref("");
+const message = ref("")
 
 onBeforeMount(() => {
-    console.log("beforeMount: 渲染之前");
-});
+    console.log("beforeMount: 渲染之前")
+})
 
 onMounted(() => {
-    console.log("mounted: 组件渲染完成");
-});
+    console.log("mounted: 组件渲染完成")
+})
 
 onBeforeUpdate(() => {
-    console.log("beforeUpdata: 组件更新之前");
-});
+    console.log("beforeUpdata: 组件更新之前")
+})
 
 onUpdated(() => {
-    console.log("updated: 组件更新完成");
-});
+    console.log("updated: 组件更新完成")
+})
 
 onBeforeUnmount(() => {
-    console.log("beforeUnmount: 组件卸载之前");
-});
+    console.log("beforeUnmount: 组件卸载之前")
+})
 
 onUnmounted(() => {
-    console.log("unmounted: 组件卸载之后");
-});
+    console.log("unmounted: 组件卸载之后")
+})
 </script>
 ```
 
@@ -189,10 +189,10 @@ onUnmounted(() => {
 </template>
 
 <script setup>
-import { ref } from "vue";
-import Lifecycle from "./components/组件生命周期.vue";
+import { ref } from "vue"
+import Lifecycle from "./components/组件生命周期.vue"
 
-const showLifecycle = ref(true);
+const showLifecycle = ref(true)
 </script>
 ```
 

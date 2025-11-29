@@ -18,15 +18,15 @@ excerpt: "Vue 自定义事件组件交互"
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const emit = defineEmits(['onEvent']);
-const message = ref("我是MyComponent数据");
+const emit = defineEmits(['onEvent'])
+const message = ref("我是MyComponent数据")
 
 function sendClickHandle() {
     // 参数1：字符串（事件名，理论上是随意的，但需要具有意义）
     // 参数2：要传递的数据
-    emit("onEvent", message.value);
+    emit("onEvent", message.value)
 }
 </script>
 ```
@@ -39,10 +39,10 @@ function sendClickHandle() {
 </template>
 
 <script setup>
-import MyComponent from "./components/自定义事件组件交互.vue";
+import MyComponent from "./components/自定义事件组件交互.vue"
 
 function getDataHandle(data){
-  console.log(data);
+  console.log(data)
 }
 </script>
 ```

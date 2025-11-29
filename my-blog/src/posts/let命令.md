@@ -17,21 +17,21 @@ excerpt: "`ES6`新增命令`let`"
 
 ```javascript
 {
-    let name = "Bob";
-    var age = 18;
+    let name = "Bob"
+    var age = 18
 }
 
-console.log(name);
-console.log(age);
+console.log(name)
+console.log(age)
 
 function user() {
-    console.log("let定义的name变量：", name);
-    console.log("var定义的age变量：", age);
+    console.log("let定义的name变量：", name)
+    console.log("var定义的age变量：", age)
 }
 
-user();
-console.log("函数中let定义的name变量：", username);
-console.log("函数中var定义的name变量：", password);
+user()
+console.log("函数中let定义的name变量：", username)
+console.log("函数中var定义的name变量：", password)
 ```
 
 运行代码后
@@ -61,7 +61,7 @@ for (let i = 0; i < 10; i++) {
         // 一些操作
     }
 
-    console.log(i);
+    console.log(i)
 ```
 
 控制台输出
@@ -73,15 +73,15 @@ Uncaught ReferenceError ReferenceError: i is not defined
 如果使用`var`命令
 
 ```javascript
-var a = [];
+var a = []
 
 for (var i = 0; i < 10; i++) {
     a[i] = function () {
-        console.log(i);
-    };
+        console.log(i)
+    }
 }
 
-a[6]();
+a[6]()
 ```
 
 我们期待的是输出6，但控制台实际输出
@@ -106,7 +106,7 @@ a[6]();
 如果使用`let`命令
 
 ```javascript
-var a = [];
+var a = []
 
 for (let i = 0; i < 10; i++) {
     a[i] = function () {
@@ -114,7 +114,7 @@ for (let i = 0; i < 10; i++) {
     };
 }
 
-a[6]();
+a[6]()
 ```
 
 控制台输出
@@ -142,12 +142,12 @@ a[6]();
 
 ```javascript
 // var定义变量
-console.log("var:", foo);
-var foo = 2;
+console.log("var:", foo)
+var foo = 2
 
 // let定义变量
-console.log("let:", bar);
-let bar = 4;
+console.log("let:", bar)
+let bar = 4
 ```
 
 控制台输出
@@ -162,10 +162,10 @@ Uncaught ReferenceError ReferenceError: Cannot access 'bar' before initializatio
 `let`不允许在相同作用域内重复声明同一个变量。
 
 ```javascript
-let i = 10;
-let i = 20;
+let i = 10
+let i = 20
 
-console.log(i);
+console.log(i)
 ```
 
 控制台输出
@@ -177,10 +177,10 @@ Uncaught SyntaxError SyntaxError: Identifier 'i' has already been declared
 如果使用`var`命令声明
 
 ```javascript
-var i = 10;
-var i = 20;
+var i = 10
+var i = 20
 
-console.log(i);
+console.log(i)
 ```
 
 控制台输出

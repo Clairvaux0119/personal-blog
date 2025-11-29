@@ -24,7 +24,7 @@ excerpt: "Vue列表渲染"
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const newsList = ref([
   {
@@ -39,7 +39,7 @@ const newsList = ref([
     id: 1003,
     title: "国际新闻"
   }
-]);
+])
 </script>
 ```
 

@@ -19,9 +19,9 @@ excerpt: "Vue条件渲染"
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const flag = ref(true);
+const flag = ref(true)
 </script>
 ```
 
@@ -44,9 +44,9 @@ const flag = ref(true);
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const flag = ref(false);
+const flag = ref(false)
 </script>
 ```
 
@@ -68,9 +68,9 @@ const flag = ref(false);
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const flag = ref(true);
+const flag = ref(true)
 </script>
 ```
 
