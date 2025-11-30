@@ -1,7 +1,7 @@
 ---
 title: Vue 组件生命周期
 date: 2025-10-18
-tags: ["javascript", "Vue", "组件"]
+tags: ["Vue", "组件"]
 excerpt: "Vue 组件生命周期"
 ---
 

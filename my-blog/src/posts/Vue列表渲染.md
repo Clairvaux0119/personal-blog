@@ -1,7 +1,7 @@
 ---
 title: Vue列表渲染
 date: 2025-10-12
-tags: ["javascript", "Vue", "列表渲染"]
+tags: ["Vue", "列表渲染"]
 excerpt: "Vue列表渲染"
 ---
 

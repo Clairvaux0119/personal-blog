@@ -1,7 +1,7 @@
 ---
 title: Vue表单输入绑定
 date: 2025-10-12
-tags: ["javascript", "Vue", "表单"]
+tags: ["Vue", "表单"]
 excerpt: "Vue表单输入绑定"
 ---
 

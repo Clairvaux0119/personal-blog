@@ -1,7 +1,7 @@
 ---
 title: Vue条件渲染
 date: 2025-10-11
-tags: ["javascript", "Vue", "条件渲染"]
+tags: ["Vue", "条件渲染"]
 excerpt: "Vue条件渲染"
 ---
 

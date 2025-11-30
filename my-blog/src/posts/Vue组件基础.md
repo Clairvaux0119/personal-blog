@@ -1,7 +1,7 @@
 ---
 title: Vue组件基础
 date: 2025-10-14
-tags: ["javascript", "Vue", "组件"]
+tags: ["Vue", "组件"]
 excerpt: "Vue组件基础"
 ---
 

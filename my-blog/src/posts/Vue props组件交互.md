@@ -1,7 +1,7 @@
 ---
 title: Vue props组件交互
 date: 2025-10-16
-tags: ["javascript", "Vue", "props", "组件"]
+tags: ["Vue", "props", "组件"]
 excerpt: "Vue props组件交互"
 ---
 

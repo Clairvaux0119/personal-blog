@@ -183,7 +183,7 @@ history: creatWebHashHistory()
 
 URL格式：<https://example.com/#/home>
 
-特点是使用URL的Hash（#）来模拟完整的URL。优点有兼容性好，支持所有浏览器；不需要服务器配置；不会在刷新页面时返回404错误。但Hash模式的SEO（Search Engine Optimization，搜索引擎优化）支持相对较差。更加适用于开发阶段或者静态站点托管。
+特点是使用URL的Hash（#）来模拟完整的URL（原理是a标签的锚点连接）。优点有兼容性好，支持所有浏览器；不需要服务器配置；不会在刷新页面时返回404错误。但Hash模式的SEO（Search Engine Optimization，搜索引擎优化）支持相对较差。更加适用于开发阶段或者静态站点托管。
 
 #### History模式（`createWebHistory`）
 
@@ -193,4 +193,4 @@ history: creatWebHistory()
 
 URL格式：<https://example.com/home>
 
-特点是使用HTML5 History API实现“真正”的URL。更加符合传统的URL习惯，对SEO的支持也更好。但其需要服务器配置支持，束鑫页面也有可能导致404错误。更加适用于生产环境或者SEO重要的情况。
+特点是使用HTML5 History API实现“真正”的URL（原理是HTML5 pushState()）。更加符合传统的URL习惯，对SEO的支持也更好。但其需要服务器配置支持，束鑫页面也有可能导致404错误。更加适用于生产环境或者SEO重要的情况。

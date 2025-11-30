@@ -1,7 +1,7 @@
 ---
 title: Vue 自定义事件组件交互
 date: 2025-10-17
-tags: ["javascript", "Vue", "组件"]
+tags: ["Vue", "组件"]
 excerpt: "Vue 自定义事件组件交互"
 ---
 

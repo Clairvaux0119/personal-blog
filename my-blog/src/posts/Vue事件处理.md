@@ -1,7 +1,7 @@
 ---
 title: Vue事件处理
 date: 2025-10-12
-tags: ["javascript", "Vue", "事件处理"]
+tags: ["Vue", "事件处理"]
 excerpt: "Vue事件处理"
 ---
 

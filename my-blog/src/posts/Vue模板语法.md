@@ -1,7 +1,7 @@
 ---
 title: Vue模板语法
 date: 2025-10-04
-tags: ["javascript", "Vue", "模板语法"]
+tags: ["Vue", "模板语法"]
 excerpt: "Vue模板语法"
 ---
 
