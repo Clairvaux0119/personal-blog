@@ -38,34 +38,34 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from "vue";
-import { useMarkdownPosts } from "../composables/useMarkdownPosts";
+import { computed, onMounted } from "vue"
+import { useMarkdownPosts } from "../composables/useMarkdownPosts"
 
 const props = defineProps({
     posts: {
         type: Array,
         default: null
     }
-});
+})
 
 const {
     posts,
     loading,
     error,
     reload: loadAllMarkdownPosts
-} = useMarkdownPosts();
+} = useMarkdownPosts()
 
 const displayedPosts = computed(() => {
-    return props.posts || posts.value;
-});
+    return props.posts || posts.value
+})
 
 // 确保组件挂载时加载数据
 if (!props.posts) {
     onMounted(() => {
         if (posts.value.length === 0 && !loading.value) {
-            loadAllMarkdownPosts();
+            loadAllMarkdownPosts()
         }
-    });
+    })
 }
 </script>
 

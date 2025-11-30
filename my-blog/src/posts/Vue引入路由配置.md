@@ -119,7 +119,7 @@ const routes = [
 
 // 创建路由实例
 const router = createRouter({
-    // 使用HTML5 History模式
+    // 使用哈希模式
     history: createWebHashHistory(),
     routes  // 简写，等同于routes: routes
 })
@@ -143,3 +143,32 @@ const app = createApp(App)
 app.use(router)
 app.mount('#app')
 ```
+
+#### 在`App.vue`中使用路由
+
+Vue3使用`<router-link to=""></router-link>`来创建导航链接，使用`<router-view />`来显示对应的页面组件。
+
+```vue
+<template>
+  <nav class="navigation">
+    <RouterLink to="/">首页</RouterLink>
+    <RouterLink to="/post">博客</RouterLink>
+    <RouterLink to="/about">关于</RouterLink>
+  </nav>
+
+  <RouterView />
+</template>
+
+<script setup>
+// 组件逻辑
+</script>
+
+<style scoped>
+/* 自定义样式 */
+</style>
+```
+
+> **`router-link`属性**
+>`to`: 指定目标路由路径
+>`active-class`: 自定义激活状态的class名
+>`exact-active-class`: 精确匹配时的class名
