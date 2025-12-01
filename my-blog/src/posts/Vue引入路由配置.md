@@ -94,9 +94,9 @@ npm install --save vue-router
 import { createRouter, createWebHashHistory } from "vue-router"
 
 // 引入页面组件
-import Home from "@/view/Home.vue"
-import Blog from "@/view/Blog.vue"
-import About from "@/view/About.vue"
+import Home from "@/views/Home.vue"
+import Blog from "@/views/Blog.vue"
+import About from "@/views/About.vue"
 
 // 定义路由规则
 const routes = [
@@ -193,4 +193,4 @@ history: creatWebHistory()
 
 URL格式：<https://example.com/home>
 
-特点是使用HTML5 History API实现“真正”的URL（原理是HTML5 pushState()）。更加符合传统的URL习惯，对SEO的支持也更好。但其需要服务器配置支持，束鑫页面也有可能导致404错误。更加适用于生产环境或者SEO重要的情况。
+特点是使用HTML5 History API实现“真正”的URL（原理是HTML5 pushState()）。更加符合传统的URL习惯，对SEO的支持也更好。但其需要服务器配置支持，刷新页面也有可能导致404错误。更加适用于生产环境或者SEO重要的情况。
