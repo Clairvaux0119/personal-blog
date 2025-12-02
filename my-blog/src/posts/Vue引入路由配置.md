@@ -1,7 +1,7 @@
 ---
 title: Vue引入路由配置
 date: 2025-10-26
-tags: ["javascript", "Vue", "vue-router"]
+tags: ["Vue", "vue-router", "路由"]
 excerpt: "Vue官方的客户端路由解决方案vue-router"
 ---
 
