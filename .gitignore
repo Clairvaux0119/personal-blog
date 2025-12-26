@@ -1,4 +1,4 @@
-# Logs
+# 日志
 logs
 *.log
 npm-debug.log*
@@ -7,14 +7,22 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-.DS_Store
-dist
-dist-ssr
-coverage
-*.local
+# 忽略 my-blog 子目录下的依赖和构建输出
+my-blog/node_modules
+my-blog/dist
+my-blog/dist-ssr
+my-blog/coverage
+my-blog/*.local
+my-blog/.eslintcache
+my-blog/__screenshots__/
+my-blog/.vitepress/cache
+my-blog/.vitepress/dist
 
-# Editor directories and files
+# 通用忽略（对整个仓库有效）
+.DS_Store
+*.tsbuildinfo
+
+# 编辑器目录
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -24,13 +32,8 @@ coverage
 *.sln
 *.sw?
 
-*.tsbuildinfo
-
-.eslintcache
-
 # Cypress
-/cypress/videos/
-/cypress/screenshots/
+my-blog/cypress/videos/
+my-blog/cypress/screenshots/
 
-# Vitest
-__screenshots__/
+package.json
