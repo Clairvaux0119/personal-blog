@@ -7,6 +7,8 @@ excerpt: "Vue模板语法"
 
 ## Vue模板语法
 
+Vue使用的是一种基于HTML的模板语法，它能够声明式地将组件实例的数据绑定到呈现的DOM上。所有的Vue模板都是语法层面合法的HTML，可以被符合规范的浏览器和HTML解析器解析。
+
 ### 文本插值
 
 数据绑定最常见的形式就是使用 "Mustache"（双大括号）语法的文本插值。
@@ -45,14 +47,14 @@ const rawHtml = ref("<a href='https://zhidao.baidu.com/'>百度知道</a>")
 </script>
 ```
 
-### 属性Attribute
+### 属性（Attribute）绑定
 
 Mustache语法不能在HTML属性中使用，要使用它需要使用`v-bind`指令。
 
 ```vue
 <template>
   <div>
-    <div v-bind:id="dynamicId" ></div>
+    <div v-bind:id="dynamicId" v-bind:class="dynamicClass"></div>
   </div>
 </template>
 
@@ -60,10 +62,52 @@ Mustache语法不能在HTML属性中使用，要使用它需要使用`v-bind`指
 import { ref } from 'vue'
 
 const dynamicId = ref(10001)
+const dynamicClass = ref("class")
 </script>
 ```
 
+如果绑定的attribute值为`null`或`null`，那么该attribute将会从渲染的元素上移除。
+
 >**注意**&nbsp;&nbsp;&nbsp;&nbsp;`v-bind`可以简写成`:`，即上述代码中`v-bind:id=""`可以简写成`:id=""`。
+
+#### 布尔型Attribute
+
+布尔型attribute依据`true`/`false`值来决定attribute是否应该存在于该元素上，`disabled`就是一个常见的例子。
+
+```vue
+<template>
+  <div>
+    <button :disabled="isButtonDisabled"></button>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const isButtonDisabled = ref(true)
+</script>
+```
+
+#### 动态绑定多个值
+
+如果要绑定一个包含多个attribute的JavaScript对象
+
+```vue
+<template>
+  <div>
+    <div v-bind="objectOfAttrs"></div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const objectOfAttrs = ref({
+  id: 'container',
+  class: 'textClass'
+})
+</script>
+```
 
 ### 使用JavaScript表达式
 

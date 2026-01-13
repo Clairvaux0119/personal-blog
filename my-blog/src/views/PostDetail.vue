@@ -355,12 +355,13 @@ onMounted(() => {
     text-decoration: underline;
 }
 
+/* 图片样式 */
 .post-content img {
     display: flex;
     justify-content: center;
     max-width: 800px;
     height: auto;
     border-radius: 8px;
-    margin: 1em 0;
+    margin: 1em auto;
 }
 </style>

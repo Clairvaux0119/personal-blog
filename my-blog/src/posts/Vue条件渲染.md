@@ -7,6 +7,8 @@ excerpt: "Vue条件渲染"
 
 ## 条件渲染
 
+在Vue中提供了条件渲染，这类似于JavaScript中的条件语句，分别有`v-if`、`v-else`、`v-else-if`、`v-show`。
+
 ### `v-if`
 
 `v-if`指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回值为`true`的时候被渲染。

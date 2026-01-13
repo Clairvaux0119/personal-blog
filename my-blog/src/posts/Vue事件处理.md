@@ -7,9 +7,14 @@ excerpt: "Vue事件处理"
 
 ## 事件处理
 
+事件处理器的值可以是
+
+1. **内联事件处理器**：事件被触发时执行内联的JavaScript语句（与`onclick`类似），通常用于简单场景。
+2. **方法事件处理器**：一个指向组件上定义的方法属性名或是路径。
+
 ### 监听事件
 
-可以使用`v-on`指令（通常缩写为`@`符号）来监听DOM事件，并在触发事件时执行一些JavaScript。用法为`v-on:click="methodName"`或者简写为`@click="methodName"`。
+可以使用`v-on`指令（通常缩写为`@`符号）来监听DOM事件，并在触发事件时执行对应的JavaScript。用法为`v-on:click="methodName"`或者简写为`@click="methodName"`。
 
 ```vue
 <template>
